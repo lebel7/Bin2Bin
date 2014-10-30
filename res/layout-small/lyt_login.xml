@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/simplegrey"
+              android:id="@+id/screenLogin">
+        <ImageView
+                android:layout_width="260dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="company logo"
+                android:src="@drawable/properlogo"
+                android:scaleType="fitXY"
+                android:id="@+id/imgLogo"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="#5287CC"
+            android:text="Please Log In"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:id="@+id/lblLoginTitle"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Enter Initials: "
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:id="@+id/lblLoginInitials"/>
+                <EditText
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:ems="12"
+                        android:hint="@string/initials_template"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:capitalize="characters"
+                        android:textStyle="bold"
+                        android:id="@+id/etxtLoginInitials"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="3dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="26dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Enter Pin: "
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:id="@+id/txtvLoginPin"/>
+                <EditText
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:inputType="phone"
+                        android:ems="12"
+                        android:hint="eg: 1234"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:id="@+id/etxtLoginPin"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+                android:layout_width="190dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/button_darkkhaki"
+                android:text="Enter"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/appbar_door_enter"
+                android:id="@+id/bnLoginProceed"/>
+</LinearLayout>

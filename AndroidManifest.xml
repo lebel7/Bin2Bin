@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.proper.bin2bin"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <supports-screens android:requiresSmallestWidthDp="240" />
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher"
+            android:theme="@android:style/Theme.Light">
+        <activity android:name=".ActLogin"
+                  android:label="@string/app_name" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActChooser"/>
+        <activity android:name="com.android.barcode.ActSingleMain"
+                  android:label="Move Single Product"
+                  android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.proper.bin2bin.ActChooser" />
+        </activity>
+        <activity android:name=".ActSingleDetails" android:label="Select Product">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.android.barcode.ActSingleMain" />
+        </activity>
+        <activity android:name="com.android.barcode.ActBinMain" android:label="Move Bin"
+                  android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.proper.bin2bin.ActChooser" />
+       </activity>
+        <activity android:name=".ActBinDetails">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.android.barcode.ActBinMain" />
+        </activity>
+        <activity android:name=".ActBinMoveMonitor" android:label="Monitor"/>
+        <activity android:name=".ActInfo" android:label="Info">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".ActBinDetails"/>
+        </activity>
+        <activity android:name="com.android.barcode.ActQueryScan" android:label="Please Scan"
+                  android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".ActQueryChooser" android:label="Choose What To Query"
+                  android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.android.barcode.ActQueryScan"/>
+        </activity>
+        <activity android:name=".QueryView"/>
+        <activity android:name=".ActProductMoveDialog"/>
+        <activity android:name=".ActBinItemSelection" android:label="Select Items to move"/>
+        <activity android:name=".ActMoveChooser"/>
+        <activity android:name="com.chainway.ht.ui.ActBinMain" android:label="Move Bin"
+                  android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.proper.bin2bin.ActChooser" />
+        </activity>
+        <activity android:name="com.chainway.ht.ui.ActSingleMain"
+                  android:label="Move Single Product" android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.proper.bin2bin.ActChooser" />
+        </activity>
+        <activity android:name="com.chainway.ht.ui.ActQueryScan" android:label="Please Scan"
+                  android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.chainway.ht.ui.ActBinProductMain" android:label="Move Product To Another Bin"
+                  android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.android.barcode.ActSingleMove" android:windowSoftInputMode="stateHidden"/>
+    </application>
+</manifest>
